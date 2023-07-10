@@ -4,7 +4,8 @@
   "description": "Ejercicio numero 1 basado en el backend de la lista de tareas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
   },
   "keywords": [],
   "author": "Agustin Baza",
