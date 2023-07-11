@@ -21,6 +21,10 @@ app.use(express.urlencoded({ extended:true}));
 app.use(cors()); 
 app.use(morgan('dev')); 
 
+console.log(path.join(__dirname, '/public'))
+app.use(express.static(path.join(__dirname, '/public')))
+
+
 // rutas
 //  http://localhost:4001/prueba
 app.get('/prueba', (req, res )=>{
