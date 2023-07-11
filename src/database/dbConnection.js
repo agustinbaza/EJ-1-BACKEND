@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const uri = 'mongodb://localhost:27017/ListaTareas';
+const uri = 'mongodb://127.0.0.1:27017/ListaTareas';
 
 mongoose.connect(uri);
 
 const datosConexion = mongoose.connection;
 
 datosConexion.once('open', ()=>{
-    console.log('BD conectada');
+    console.log('Estamos conectados a la base de datos');
 });
 
 
