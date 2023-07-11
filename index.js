@@ -3,6 +3,7 @@ import cors from 'cors'
 import * as dotenv from 'dotenv';
 import morgan from 'morgan';
 import path from 'path';
+import tareasRouter from './src/routes/tareas.routes';
 
 dotenv.config();
 
@@ -27,6 +28,10 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 // rutas
 //  http://localhost:4001/prueba
-app.get('/prueba', (req, res )=>{
-    res.send('Esta es una prueba de mi ruta GET')
-})
+// app.get('/prueba', (req, res )=>{
+//     res.send('Esta es una prueba de mi ruta GET')
+// })
+
+//  http://localhost:4001/apitareas/prueba
+
+app.use('/apitareas', tareasRouter)
