@@ -7,14 +7,6 @@ export const controladorPrueba = (req, res) => {
 
 export const crearTarea = async (req, res) => {
   try {
-
-    const errors = validationResult(req);
-    if(!errors.isEmpty()){
-        return res.status(400).json({
-            errores: errors.array() 
-        })
-    }
-
     const tareaNueva = new Tarea(req.body);
     await tareaNueva.save();
     res.status(201).json({
