@@ -26,13 +26,4 @@ app.use(morgan('dev'));
 console.log(path.join(__dirname, '/public'))
 app.use(express.static(path.join(__dirname, '/public')))
 
-
-// rutas
-//  http://localhost:4001/prueba
-// app.get('/prueba', (req, res )=>{
-//     res.send('Esta es una prueba de mi ruta GET')
-// })
-
-//  http://localhost:4001/apitareas/prueba
-
 app.use('/apitareas', tareasRouter)

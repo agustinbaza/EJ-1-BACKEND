@@ -12,15 +12,11 @@ import validarTarea from "../helpers/validarTarea";
 const router = Router();
 
 router.route("/prueba").get(controladorPrueba);
-router
-  .route("/tareas")
-  .post( validarTarea , crearTarea)
-  .get(obtenerListaTareas);
+router.route("/tareas").post(validarTarea, crearTarea).get(obtenerListaTareas);
 router
   .route("/tareas/:id")
   .get(obtenerTarea)
   .delete(borrarTarea)
-  .put( validarTarea, editarTarea
-  );
+  .put(validarTarea, editarTarea);
 
 export default router;
